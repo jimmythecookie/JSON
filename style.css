@@ -1,0 +1,91 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 20px;
+}
+
+#heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#heading h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+#heading p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Styling the grid container */
+#collectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.projectItem {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projectTitle {
+  font-size: 1.5em;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  background-color: #e9ecef;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Small animation to underline */
+.projectTitle:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #0d6efd;
+  transition: width 0.3s;
+}
+
+.projectTitle:hover:after {
+  width: 100%;
+}
